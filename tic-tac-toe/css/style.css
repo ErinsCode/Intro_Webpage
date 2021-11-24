@@ -1,0 +1,130 @@
+body {
+    background: #022421; 
+    background-image: url(../img/trees.PNG);
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+}
+
+header {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.5em;
+    color: #2f16ec;
+    margin: 0;
+    padding: 25px;
+}
+
+main {
+    background-color: #f2cca2;
+    width: 65%;
+    margin: 15px auto;
+}
+
+form {
+    text-align: center;
+    padding: 40px;
+}
+
+form img {
+    height: 100px;
+}
+
+input {
+    margin: 20px;
+    font-size: 1.5em;
+    color: green;
+    background-color: black;
+    padding: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    opacity: .75;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    opacity: .75;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    opacity: .75;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    opacity: .75;
+  }
+
+#gameboard {
+    position: relative;
+    margin: 0 auto;
+    width: 57%;
+    height: 550px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#gameboard div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+#gameboard div img {
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+}
+
+.top {
+    top: 60px;
+    border-bottom: 4px solid #703500;
+}
+
+.middle {
+    top: 214px;
+}
+
+.bottom {
+    top: 364px;
+    border-top: 4px solid #703500;
+}
+
+.left {
+    left: 46px;
+    border-right: 4px solid #703500;
+}
+
+.center {
+    left: 200px;
+}
+
+.right {
+    left: 350px;
+    border-left: 4px solid #703500;
+}
+
+div {
+    text-align: center;
+}
+
+button {
+    text-align: center;
+    font-size: 2em;
+    color: green;
+    background-color: black;
+    padding: 10px;
+}
+
+#play-again-div {
+    text-align: center;
+    padding-top: 20px;
+}

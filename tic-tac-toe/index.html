@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<htmL lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/scripts.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        </style> 
+
+</head>
+
+<body>
+    <audio id="myAudio">
+        <source src="img/wonSound.mp3" type="audio/mpeg">
+      </audio>
+      
+    <header>
+        <img class="side-pictures" src="img/heart.png" alt="heart">
+        <h1 id="message-to-players">Tic Tac Toe</h1>
+        <img class="side-pictures" src="img/heart.png" alt="heart">
+    </header>
+
+
+    <main>
+        <div class="hide" id="play-again-div">
+            <button type="button" onclick="restartGame()">Play Again!</button>
+        </div>
+        <form id="player-form" autocomplete="off" action="javascript:void(0)">
+            <label for="player1"><img src='img/link.png' alt='X'></label>
+            <input type="text" id="player1" placeholder="Player 1 Name">
+            <label for="player2"><img src='img/octorok.png' alt='O'></label>
+            <input type="text" id="player2" placeholder="Player 2 Name">
+            <br>
+            <input type="submit" onclick="startGame()" value="Start Game">
+        </form>
+        <div id="gameboard" class="hide">
+            <div onclick="playGame(this, 1)" class="top left"></div>
+            <div onclick="playGame(this, 2)" class="top center"></div>
+            <div onclick="playGame(this, 4)" class="top right"></div>
+            <div onclick="playGame(this, 8)" class="middle left"></div>
+            <div onclick="playGame(this, 16)" class="middle center"></div>
+            <div onclick="playGame(this, 32)" class="middle right"></div>
+            <div onclick="playGame(this, 64)" class="bottom left"></div>
+            <div onclick="playGame(this, 128)" class="bottom center"></div>
+            <div onclick="playGame(this, 256)" class="bottom right"></div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</htmL>
