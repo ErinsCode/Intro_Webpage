@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Parlor- Contact Us</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="myscripts.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+
+        body {
+            background-image: linear-gradient(to bottom right, #09191d, #283637, #09191d);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <main class="has-form">
+            <p>We love to hear from our customers! Tell us about your recent visit to our restaurant. Whether you loved
+                us or had a bad experience, let us
+                know. We want to make sure we are doing the best we can and would love to hear your feedback. Use our
+                form below to leave us a message and we'll
+                get back to you.
+            </p>
+
+            <form action="https://www.stonecoldprofessor.com/pizza-contact.php" method="post">
+                <div class="form-section comments">
+                    <h3>Your Information</h3>
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="first-name" id="fname"><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="last-name" id="lname"><br>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email">
+
+                    <h3>Message</h3>
+                    <textarea name="message" id="message" class="comments-area"></textarea><br>
+                </div>
+
+                <div class="action-buttons">
+                    <input type="reset" value="Clear">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </main>
+        <aside>
+            <div>Phone Number <br> 801-969-8954 </div>
+            <hr>
+            <div>123 Fake Street <br> Herriman, UT, 84096 </div>
+            <img src="img/pizza2.jpg" alt="pizza"><br>
+            <img src="img/restaurant.jpg" alt="restaurant"><br>
+            <img src="img/pizza3.jpg" alt="pizza">
+        </aside>
+    </div>
+
+</body>
+
+</html>

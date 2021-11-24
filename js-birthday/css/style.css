@@ -1,0 +1,53 @@
+body
+{
+    background-color: white;
+}
+
+#birthdayMessage {
+    color: lightseagreen;
+    font-size: 80px;
+    font-family: tahoma;
+    margin: 25px;
+    text-align: center;
+}
+
+main {
+    width: 75%;
+    height: 600px;
+    margin: 20px auto;
+}
+
+#candle-area {
+    height: 50%;
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#candle-area div {
+    bottom: 0;
+    position: absolute;
+}
+
+#candle-area div img {
+    height: 250px;
+}
+
+#cake {
+    height: 45%;
+    width: 75%;
+    margin: 0 auto;
+    background-color: pink;
+    border-radius: 10px;
+}
+
+#plate {
+    height: 5%;
+    width: 95%;
+    margin: 0 auto;
+    background-color: lightgray;
+    border-radius: 50%;
+}

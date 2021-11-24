@@ -1,0 +1,42 @@
+body{
+    background-color: lightyellow;
+}
+
+#book-cover {
+    margin: 125px auto;
+    background-color: brown;
+    width: 75%;
+    min-height: 800px;
+    display: flex;
+}
+
+.page {
+    background-color: white;
+    border: 2px lightgray solid;
+    width: 47%;
+    margin: 17px auto;
+}
+
+.page h3
+{
+    text-align: center;
+}
+
+h3{
+
+    font-size: 40px;
+    
+}
+
+p
+{
+    font-size: 24px;
+    padding: 10px;
+    margin: 15px;
+}
+
+h1
+{
+    font-size: 60px;
+    text-align: center;
+}

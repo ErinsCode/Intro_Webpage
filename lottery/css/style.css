@@ -1,0 +1,49 @@
+body {
+    background-image: url(../img/lotto-background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    background-color: #cccc;
+    margin: 20px auto;
+    padding: 40px;
+    width: 75%;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.buttons {
+    background-color: #c09b41;
+    margin: 20px;
+    font-size: 1.5em;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 5em;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+#lotto-results {
+    background-color: #01072a;
+    min-height: 100px;
+    min-width: 500px;
+    color: gold;
+    font-size: 2.5em;
+    padding: 50px 20px 50px 20px;
+    overflow-wrap: break-word;
+    
+}

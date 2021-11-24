@@ -1,0 +1,347 @@
+/* Change the defaults for the body so that margin is set to 0px, and overflow is hidden.  Set the background color. */
+body {
+    margin: 0px;
+    overflow: hidden;
+    background-color: #63C5DA;
+}
+
+/* Make a large sun by making a circle, done with a border radius of 50%.  Make the sun position relative so that the sun spots
+within it can be positioned within it.  Make the sun slightly oblong so that it is not a perfect circle. */
+#sun {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    background-color: #fde64b;
+    position: relative;
+    margin: 70px 675px;
+    transform: scale(1.1, 1);
+}
+
+/*
+    Create the sunspots within the sun div.  Make diamonds by making squares and rotating them 45 degrees
+*/
+.sunspot {
+    background-color: #f9c802;
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 60px;
+    left: 72px;
+}
+
+/*
+    Select the first sunspot div in the sun div and set it's position within the sun div
+*/
+#sun :first-child {
+    top: 60px;
+    left: 40px;
+}
+
+/*
+    Select the last sunspot div and set it's position to the middle bottom of the other sunspots
+*/
+#sun :last-child {
+    top: 77px;
+    left: 56px;
+}
+
+/*
+    Create a div to contain the mountains in.  Set position to absolute so that the mountainrange can be set in a set position.  Make
+    the dsiplay flex so that the mountains will be next to one another, versus on top of each other.
+*/
+#mountain-range {
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    display: flex;
+    flex-direction: flex;
+}
+
+/*Set common style for every mountain.  Give them a width and heigth of 0 so that we can make triangles for the mountains.
+Make position relative so that the snow caps within them can be absolute.*/
+.mountain {
+    position: relative;
+    width: 0;
+    height: 0;
+}
+
+/*Make the very first mountian by creating a triangle with 3 borders, two transparent and one with color.  Position it from the
+top of the mountain range parent.  Had to specify the direct first child of the mountain range for this mountain, else
+it would also select the first grandchildren as well, aka the snow cap.*/
+#mountain-range > :first-child {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 280px solid #00695c;
+    top: 110px;
+}
+
+/*Make the second mountain by creating a triangle with 3 borders, two transparent and one color.  Position it from the
+top of the mountain range parent, and make it go to the right of the first mountain.  Again, had to specify the direct second child of 
+the mountain range for this mountain, else it would also select the second grandchildren as well, aka one of the snow caps.*/
+#mountain-range > :nth-child(2) {
+    border-left: 90px solid transparent;
+    border-right: 85px solid transparent;
+    border-bottom: 375px solid #022D36;
+    left: -67px;
+    top: 30px;
+}
+
+/*Make the third mountain in the mountain range div.  Didn't have to specify the direct third child because their are no 
+grandchildren to the third "degree."  Changed the color of this mountain slightly, and the angle of the triangle the borders are 
+creating.  Position from top of mountain range and to the right of the second mountain */
+#mountain-range :nth-child(3) {
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 160px solid #59788E;
+    left: -140px;
+    top: 230px;
+}
+
+/*Make fourth mountain. Make a triangle with borders and adjust the px of the left, right, and bottom borders to adjust the angles and
+height of the triangle.  Changed the color.  Position so that it will be aligned with the others on the bottom, 
+and put to the right of the third mountain. */
+#mountain-range :nth-child(4) {
+    border-left: 100px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 170px solid #80cbc4;
+    left: -225px;
+    top: 210px;
+}
+
+/*Make fifth mountain. Make a triangle with borders and adjust the px of the left, right, and bottom borders to adjust the angles and
+height of the triangle.  Changed the color.  Position so that it will be aligned with the others on the bottom, 
+and put to the right of the fourth mountain. */
+#mountain-range :nth-child(5) {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 160px solid #022D36;
+    left: -147px;
+    top: 210px;
+}
+
+/*Make the sixth, and final mountain.  Have to specify the direct last child of the mountain range so that the last child of one of
+the mountains isn't affected. Make a triangle with borders and adjust the px of the left, right, and bottom borders to adjust the angles and
+height of the triangle.  Changed the color.  Position so that it will be aligned with the others on the bottom, 
+and put to the right of the fifth mountain.*/
+#mountain-range > :last-child {
+    border-left: 124px solid transparent;
+    border-right: 124px solid transparent;
+    border-bottom: 309px solid #00695c;
+    left: -314px;
+    top: 62px;
+}
+
+/* Make all the snow caps position absolute so that they can be put on top of the mountians exactly where they need to go. */
+.snowcap {
+    position: absolute;
+}
+
+/*Two of the mountains has a snow cap, and another bit of "snow" that hanges down.  This is done by adding a second snow cap
+div and making a square and rotating it 45 degrees. */
+.secondcap {
+    background-color: white;
+    transform: rotate(45deg);
+    height: 30px;
+    width: 20px;
+   
+}
+
+/* Make the snowcap on the first mountain.  Make a small white triangle that will sit ontop of the mountain triangle.  
+Position it on to of it's parent mountain. */
+#snowcap1 {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 25px solid white;
+    right: -7.996px;
+}
+
+/* Make the snowcap on the second mountain.  Make a small white triangle that will sit ontop of the mountain triangle.  
+Position it on to of it's parent mountain. */
+#snowcap2 {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 25px solid white;
+    right: -5.996px;
+}
+
+/* Make the snowcap on the third mountain.  Make a small white triangle that will sit ontop of the mountain triangle.  
+Position it on to of it's parent mountain. */
+#snowcap3 {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 19px solid white;
+    right: -8.996px;
+}
+
+/* Make the snowcap on the fourth mountain.  Make a small white triangle that will sit ontop of the mountain triangle.  
+Position it on to of it's parent mountain. */
+#snowcap4 {
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 30px solid white;
+    left: -17px;
+}
+
+/* Set position and size of second snow cap on mountain four so that it hangs below the other snowcap and is turned at 
+an angle, ensuring that the second snow cap is only sticking up at the bottom of the first snow cap. */
+#snowcap4_2ndcap {
+    top: 11px;
+    left: -6px;
+   
+}
+
+/* Make the snowcap on the fifth mountain.  Make a small white triangle that will sit ontop of the mountain triangle.  
+Position it on to of it's parent mountain. */
+#snowcap5 {
+    border-left: 30px solid transparent;
+    border-right: 34px solid transparent;
+    border-bottom: 39px solid white;
+    right: -33.5px;
+    top: -.5px;
+}
+
+/* Make the snowcap on the sixth mountain.  Make a small white triangle that will sit ontop of the mountain triangle.  
+Position it on to of it's parent mountain. */
+#snowcap6 {
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-bottom: 56px solid white;
+    right: -23.996px;
+}
+
+/* Set position and size of second snow cap on the last mountain so that it hangs below the other snowcap and is turned at 
+an angle, ensuring that the second snow cap is only sticking up at the bottom of the first snow cap. */
+#snowcap6_2ndcap {
+    background-color: white;
+    top: 33px;
+    left: -9px;
+}
+
+/* Create a div to put the grass in.  Made it position relative so that the children can be positioned absolute. */
+#grass {
+    position: relative;
+}
+
+/* Make it so that all the divs within the grass element are the same color and height.  Make them have an absolute position
+and change the z-index to make sure that they are on top of the mountains and the water. */
+#grass div {
+    background-color: teal;
+    height: 27px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* Set the width and position of the grass on the left moutains */
+#grass-left {
+    width: 550px;
+    margin-left: 300px;
+    top: 134px;
+}
+
+/* Set the width and position of the grass on the right moutains */
+#grass-right {
+    width: 370px;
+    margin-left: 928px;
+    top: 125px;
+}
+
+/* Make an oval for the water by making the width and hieght of the div different and making the radius 50%, as if it were
+a circle  Rotate it slightly, and position it so it looks nice with the other elements. Change the z-index so it will sit behind
+the other divs. Make the position absolute in relation to the body so it doesn't move when resized..   */
+#water {
+    border-radius: 50%;
+    transform: rotate(-2deg);
+    background-color: #0A1172;
+    width: 1168px;
+    height: 300px;
+    margin-left: 193px;
+    margin-top: 83px;
+    z-index: -1;
+    position: absolute;
+}
+
+/* Create an island by making a non-normal shape with the border radius property.  Make it the same color as the grass */
+#island {
+    width: 200px;
+    height: 100px;
+    background-color: teal;
+    border-radius: 73% 100% 17% 100% / 54% 97% 35% 100%;
+    margin-left: 360px;
+    margin-top: 108px;
+}
+
+/* Create a treediv class to position individual trees in.  Each treediv will have the same width, height, and will all be 
+position relative so the tree components can be placed correctly */
+.treediv {
+    position: relative;
+    width: 10px;
+    height: 30px;
+}
+
+/* Create the top of the pine tree by making a green triangle */
+.toptree {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 11px solid #00ae03;
+}
+
+/* Create the bottom of the pine tree by making a green triangle and putting it below the top one */
+.bottomtree {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 11px solid #00ae03;
+    left: -4px;
+    top: 9px;
+}
+
+/* All of the leaf components of the pine trees will be position absolute to specify where they go in the tree div */
+.tree_leaves {
+    position: absolute;
+}
+
+/* Create the tree trunks by making a brown rectangle, and position it under the bottom part of the pine tree */
+.trunk {
+    background-color: brown;
+    height: 9px;
+    width: 4px;
+    top: 19px;
+    position: absolute;
+    left: 2px;
+}
+
+/* Create one div that takes up the entirety of the body's size and position it absolute for the trees to go in.*/
+#trees {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* Take the direct firsh child (aka first tree div with the tree components in it), and position it on the screen.*/
+#trees > :first-child {
+    top: 110px;
+    left: 650px;
+    position: absolute;
+}
+
+/* Take the direct second child (aka first tree div with the tree components in it), and position it on the screen.*/
+#trees > :nth-child(2) {
+    top: 110px;
+    left: 750px;
+    position: absolute;
+}
+
+/* Take the direct third child (aka first tree div with the tree components in it), and position it on the screen.*/
+#trees > :nth-child(3) {
+    top: 97px;
+    left: 1000px;
+    position: absolute;
+}
+
+/* Take the direct last child (aka first tree div with the tree components in it), and position it on the screen.*/
+#trees > :last-child {
+    top: 97px;
+    left: 1050px;
+    position: absolute;
+}
