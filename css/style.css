@@ -1,0 +1,113 @@
+/* header {
+    background-image: linear-gradient(#022d36 25%, teal 60%);
+    background-repeat: no-repeat;
+    animation: switch-places 15s 2s;
+} */
+
+#html-link-toggler {
+    outline: none;
+    box-shadow: none;
+}
+
+#css-link-toggler {
+    outline: none;
+    box-shadow: none;
+}
+
+#js-link-toggler {
+    outline: none;
+    box-shadow: none;
+}
+
+.cimode {
+    height: 300px;
+}
+
+#project-div {
+    text-align: center;
+    background-color: coral;
+    padding: 25px;
+}
+
+#project-div h2
+{
+    font-weight: bold;
+}
+
+#reflection {
+    width: 75%;
+}
+
+#reflection p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#project-background {
+    background-color: #eff1f3;
+}
+
+#navigation-bar {
+    background-color: #031927;
+}
+
+#navigation-bar ul li a {
+    color: grey;
+}
+
+#navigation-bar ul li a:hover {
+    color: #F0F600;
+}
+
+div#quote-section {
+    min-height: 25rem;
+    background-color: #006c67;
+}
+
+header {
+    background: linear-gradient(-45deg, #F0F600, #ee7752, #e73c7e, purple);
+    background-size: 400% 400%;
+    animation: circleAround 10s ease infinite;
+}
+#navigation-bar div div button span {
+    font-size: 2rem;
+}
+#navigation-bar ul li a {
+    font-size: 1.25rem;
+}
+
+
+@keyframes circleAround
+{
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@media (max-width: 750px) {
+    .cmode {
+        height: 525px;
+        width: 50rem;
+    }
+}
+
+@media (max-width: 985px) {
+    #navigation-bar div div button span {
+        font-size: 3rem;
+        width: 100%;
+        width: 50rem;
+    }
+    #navigation-bar ul li a {
+        font-size: 1.5rem;
+    }
+}
