@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background-color:black;
+    
+}
+
+#main
+{
+    margin: 3rem 0;
+}
+
+.comic-name {
+    width: 74%;
+    height: 25rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    background-size: 100% 25rem;
+    line-height: 45rem;
+    margin: 3rem auto 0 auto;
+    border: 20px solid black;
+    border-radius: 30px;
+}
+
+
+#dcdiv {
+    background-image: url("../img/dclogo.jpg");
+    color: white;
+}
+
+#dcdiv h1 {
+    margin: auto;
+}
+
+#marveldiv {
+    background-image: url("../img/marvel.jpg");
+    color: gold;
+}
+
+#marveldiv h1 {
+    margin: auto;
+}
+
+.hero-picture {
+    width: 45%;
+    height: 100%;
+    background-size: 100%, 110%;
+    background-repeat: no-repeat;
+}
+
+.name-div {
+    width: 55%;
+    height: 100%;
+}
+
+.short-description
+{
+    padding: 50px 15px !important;
+}
+.name-div p {
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+
+.superhero-header {
+    width: 70%;
+    height: 21rem;
+    display: flex;
+    flex-direction: row;
+    margin: 3rem auto 0 auto;
+    border: 10px inset gray;
+    transition: .1s;
+}
+
+.superhero-header:hover
+{
+    transform:scale(1.15);
+}
+
+
+.hero-name {
+    font-size: 2.5rem;
+    margin-bottom: .25rem;
+    text-align: center;
+}
+
+

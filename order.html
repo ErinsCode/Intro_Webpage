@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pizza Parlor - Order</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="myscripts.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
+        body
+        {
+            background-image: url(img/tomatoes2.png);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        
+        <h1>Order Page</h1>
+        <div class="background-div header-div"></div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="order.html">Order</a></li>
+        </ul>
+    </nav>
+    <main class="has-form">
+        <div id="delivery-section">
+        <img src="img/delivery-truck.png" alt="delivery truck">
+        <p>Order your pizza online and we'll deliver it to you within 30 minutes.  Choose your favorite kinds of crust, size, and toppings and we will 
+            put together your perfect pizza.  Let us know if there are any specific instructions our delivery person needs to know about in the comments below.
+        </p>
+    </div>
+        <form action="https://www.stonecoldprofessor.com/pizza-order.php" method="POST">
+            <div id="personal-details" class="form-section">
+                <h4>Personal Information</h4>
+                <hr>
+                <div class="form-columns">
+                    <div id="contact-info">
+                        <label for="fname">First Name:</label>
+                        <input type="text" name="first" id="fname"><br>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="last" id="lname"><br>
+
+                        <label for="phone">*Phone Number:</label>
+                        <input type="text" name="phone" id="phone" required><br>
+
+                        <label for="email">*Email:</label>
+                        <input type="email" name="email" id="email" required><br>
+                    </div>
+
+                    <div id="address">
+                        <label for="add1">*Address 1:</label>
+                        <input type="text" name="add1" id="add1" required> <br>
+
+                        <label for="add2">Address 2:</label>
+                        <input type="text" name="add2" id="add2"><br>
+
+                        <label for="city">*City:</label>
+                        <input type="text" name="city" id="city" required> <br>
+
+                        <labeL for="state">*State:</labeL>
+                        <select name="state" id="state" required>
+                            <option value="" selected disabled>Select...</option>
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="DC">DC</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                        </select>
+
+                        <label for="zip">*Zip Code:</label>
+                        <input type="text" name="zip" id="zip" required><br>
+                    </div>
+
+                </div>
+                <p id="required-message">* required</p>
+            </div>
+
+            <div class="comments form-section">
+                <h4>Comments</h4>
+                <hr>
+                <textarea class="comments-area" name="comments" rows="4" cols="50"></textarea>
+            </div>
+
+            <div id="pizza-choices" class="form-section">
+                <h3>Pizza Choices</h3>
+                <hr>
+                <div class="topping-columns">
+                    <div id="crust-choice">
+                        <h4>Crust</h4>
+                        <select id="crust" name="crust">
+                            <option value="none" selected disabled>Select One...</option>
+                            <option value="thin">Thin</option>
+                            <option value="regular">Regular</option>
+                            <option value="pan">Pan</option>
+                            <option value="stuffed">Stuffed</option>
+                        </select>
+
+                    </div>
+                    <div id="size-choice">
+                        <h4>Size</h4>
+
+                        <input type="radio" id="small" name="size" value="Small">
+                        <label for="small">Small</label>
+
+                        <input type="radio" id="medium" name="size" value="Medium">
+                        <label for="medium">Medium</label>
+
+                        <input type="radio" id="large" name="size" value="Large">
+                        <label for="large">Large</label>
+
+                        <input type="radio" id="xlarge" name="size" value="X-Large">
+                        <label for="xlarge">X-Large</label>
+                    </div>
+                </div>
+                <h3>Toppings</h3>
+                <div id="topping-choices">
+
+                    <div class="topping" style="grid-area: t1;">
+                        <label for="pepperoni"><img src="img/pepperoni.jpg" alt="Pepperoni"></label>
+                        <input id="pepperoni" type="checkbox" name="toppings[]" value="pepperoni">
+                        <label for="pepperoni">Pepperoni</label>
+                    </div>
+                    <div class="topping" style="grid-area: t2;">
+                        <label for="sausage"><img src="img/sausage.jpg" alt="Sausage"></label>
+                        <input id="sausage" type="checkbox" name="toppings[]" value="sausage">
+                        <label for="sausage">Sausage</label>
+                    </div>
+                    <div class="topping" style="grid-area: t3;">
+                        <label for="ham"><img src="img/ham.jpg" alt="Ham"></label>
+                        <input id="ham" type="checkbox" name="toppings[]" value="ham">
+                        <label for="ham">Ham</label>
+                    </div>
+                    <div class="topping" style="grid-area: t4;">
+                        <label for="mushrooms"><img src="img/mushrooms.jpg" alt="Mushrooms"></label>
+                        <input id="mushrooms" type="checkbox" name="toppings[]" value="mushrooms">
+                        <label for="mushrooms">Mushrooms</label>
+                    </div>
+                    <div class="topping" style="grid-area: t5;">
+                        <label for="green-peppers"><img src="img/green-peppers.jpg" alt="Green Peppers"></label>
+                        <input id="green-peppers" type="checkbox" name="toppings[]" value="green-peppers">
+                        <label for="green-peppers">Green Peppers</label>
+                    </div>
+                    <div class="topping" style="grid-area: t6;">
+                        <label for="olives"><img src="img/olives.jpg" alt="Olives"></label>
+                        <input id="olives" type="checkbox" name="toppings[]" value="olives">
+                        <label for="olives">Olives</label>
+                    </div>
+                    <div class="topping" style="grid-area: t7;">
+                        <label for="extra-cheese"><img src="img/cheese.jpg" alt="Extra Cheese"></label>
+                        <input id="extra-cheese" type="checkbox" name="toppings[]" value="extra-cheese">
+                        <label for="extra-cheese">Extra Cheese</label>
+                    </div>
+                    <div class="topping" style="grid-area: t8;">
+                        <label for="onions"> <img src="img/onions.jpg" alt="Onions"></label>
+                        <input id="onions" type="checkbox" name="toppings[]" value="onions">
+                        <label for="onions">Onions</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <input type="reset" value="Clear">
+                <input type="submit" value="Send">
+            </div>
+
+
+        </form>
+    </main>
+
+</body>
+
+</html>
